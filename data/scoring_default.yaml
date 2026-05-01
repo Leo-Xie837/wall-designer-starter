@@ -1,0 +1,89 @@
+schema_version: '2.0'
+scoring:
+  profile_id: vienna_classic_balanced_v1
+  name: Classic Balanced Profile
+  description: Optimized for Hill Climbing algorithms to encourage wall density.
+  normalization:
+    raw_metric_scale: 0_to_100
+    final_score_scale: 0_to_1
+  hard_constraints:
+    min_artworks:
+      enabled: true
+      value: 1
+      penalty_mode: reject
+      penalty_value: 1
+    max_artworks:
+      enabled: true
+      value: 20
+      penalty_mode: reject
+      penalty_value: 1
+    no_overlap:
+      enabled: true
+      penalty_mode: reject
+      penalty_value: 1
+    stay_within_wall:
+      enabled: true
+      penalty_mode: reject
+      penalty_value: 1
+    min_gap_ft:
+      enabled: true
+      value: 2.48
+      penalty_mode: reject
+      penalty_value: 1
+  criteria:
+    wall_utilization:
+      label: Wall Utilization
+      evaluates: arrangement
+      metric_type: target
+      importance: 1
+      preferred_value: 85
+      tolerance: 15
+      algorithm:
+        method: occupied_width_ratio
+        params:
+          count_internal_gaps: true
+    visual_balance:
+      label: Visual Balance
+      evaluates: arrangement
+      metric_type: target
+      importance: 0.7
+      preferred_value: 50
+      tolerance: 20
+      algorithm:
+        method: left_right_visual_mass_balance
+        params:
+          mass_formula: area_times_intensity
+    focal_point:
+      label: Focal Point Placement
+      evaluates: arrangement
+      importance: 0.9
+      preferred_value: 80
+      tolerance: 20
+      algorithm:
+        method: featured_work_near_preferred_zone
+        params:
+          featured_selection: highest_focal_weight
+          preferred_zone: center
+    spacing_regularity:
+      label: Spacing Regularity
+      evaluates: arrangement
+      importance: 0.5
+      preferred_value: 80
+      tolerance: 20
+      algorithm:
+        method: gap_variance_vs_ideal
+        params:
+          ideal_gap_ft: 2.8
+          min_gap_ft: 2.48
+          max_gap_ft: 4
+    thematic_cohesion:
+      label: Thematic Cohesion
+      evaluates: arrangement
+      importance: 1
+      preferred_value: 70
+      tolerance: 25
+      algorithm:
+        method: adjacent_theme_similarity_average
+  aggregation:
+    method: weighted_average
+    include_penalty_terms: true

@@ -1,0 +1,255 @@
+show:
+  id: show_01
+  title: Sample Gund Show
+  subtitle: Initial layout using selected artworks
+  gallery_id: gund_second_floor
+  scoring_profile_id: vienna_wall_basic_v1
+  curator: Applied Algorithms
+  notes: Simple starter show for wall-by-wall design.
+  wall_designs:
+  - wall_id: R2-N
+    candidate_artwork_ids:
+    - A1
+    - A5
+    - A8
+    - A26
+    - A9
+    - A21
+    - A22
+    - A23
+    - A24
+    - A25
+    - A27
+    - Kenyon-Angels
+    - SKON2
+    - A30
+    - A35
+    - '19023'
+    - colorado_springs_sunset
+    - wave_painting
+    - A100
+    - A101
+    - A102
+    - A103
+    - A104
+    - A105
+    - A106
+    - A107
+    - A108
+    - A109
+    - A110
+    - A111
+    - A112
+    - A113
+    - A114
+    - A115
+    - A116
+    - A117
+    - A118
+    - A119
+    - A120
+    - A121
+    - A122
+    - A123
+    - A124
+    - A125
+    - A126
+    - A127
+    - A128
+    - A129
+    - A130
+    - A131
+    - A132
+    - A133
+    - A134
+    - A135
+    - A136
+    - A137
+    - A138
+    - A139
+    - A140
+    - A141
+    - A142
+    - A143
+    - A144
+    - A145
+    - A146
+    - A147
+    - A148
+    - A149
+    - A150
+    - A151
+    - A152
+    - A153
+    - A154
+    - A155
+    - A156
+    - A157
+    - A158
+    - A159
+    - A160
+    - A500
+    - A501
+    - A502
+    - A503
+    - A504
+    - A505
+    - A506
+    - A507
+    - A508
+    - A509
+    - A510
+    - A511
+    - A512
+    - A513
+    - A514
+    - A515
+    - A516
+    - A517
+    - A518
+    - A519
+    - MET1
+    - MET2
+    - MET3
+    - MET4
+    - MET5
+    - MET6
+    - MET7
+    - MET8
+    - MET9
+    - MET10
+    scoring_profile_id: vienna_wall_basic_v1
+    algorithm_file: wall_greedy_v1.py
+    notes: Classical plus modern starter candidates.
+  - wall_id: R7-S
+    candidate_artwork_ids:
+    - A8
+    - A30
+    - '19023'
+    - wave_painting
+    - A5
+    - A119
+    - A135
+    - A136
+    - A509
+    - A510
+    - A511
+    - A517
+    - A518
+    - MET7
+    - A24
+    - A103
+    - A145
+    - A26
+    - A27
+    - A114
+    - A115
+    - A116
+    - A117
+    - A125
+    - A142
+    - A143
+    - A146
+    - A147
+    - A148
+    - A153
+    - A154
+    - A513
+    - A514
+    - MET10
+    scoring_profile_id: vienna_wall_basic_v1
+    algorithm_file: wall_greedy_v1.py
+    notes: Photography and local works.
+  arrangements:
+  - id: ARR_R2N_001
+    title: R2-N Generated Arrangement
+    space_id: R2-N
+    status: generated
+    notes: ''
+    score:
+      total: 0.801
+      failed_constraints: []
+      criteria:
+        wall_utilization:
+          raw: 84.75
+          score: 0.995
+          importance: 1.0
+        visual_balance:
+          raw: 51.0
+          score: 0.985
+          importance: 0.7
+        focal_point:
+          raw: 59.0
+          score: 0.98
+          importance: 0.9
+        spacing_regularity:
+          raw: 91.0
+          score: 0.835
+          importance: 0.5
+        thematic_cohesion:
+          raw: 10.0
+          score: 0.3
+          importance: 1.0
+      warnings: []
+    placements:
+    - artwork_id: A24
+      x_ft: 3.05
+      y_ft: 4.3
+    - artwork_id: A141
+      x_ft: 10.05
+      y_ft: 2.15
+    - artwork_id: A110
+      x_ft: 22.05
+      y_ft: 4.25
+    - artwork_id: A152
+      x_ft: 27.55
+      y_ft: 3.9
+    - artwork_id: A111
+      x_ft: 34.35
+      y_ft: 3.95
+  - id: ARR_R7S_001
+    title: R7-S Generated Arrangement
+    space_id: R7-S
+    status: generated
+    notes: ''
+    score:
+      total: 0.77
+      failed_constraints: []
+      criteria:
+        wall_utilization:
+          raw: 68.25
+          score: 0.965
+          importance: 1.0
+        visual_balance:
+          raw: 28.76
+          score: 0.9751
+          importance: 0.7
+        focal_point:
+          raw: 72.0
+          score: 0.88
+          importance: 0.9
+        spacing_regularity:
+          raw: 91.0
+          score: 0.835
+          importance: 0.5
+        thematic_cohesion:
+          raw: 10.0
+          score: 0.3
+          importance: 1.0
+      warnings: []
+    placements:
+    - artwork_id: A145
+      x_ft: 6.35
+      y_ft: 2.75
+    - artwork_id: A24
+      x_ft: 14.85
+      y_ft: 4.3
+    - artwork_id: A135
+      x_ft: 21.85
+      y_ft: 4.75
+    - artwork_id: A5
+      x_ft: 26.35
+      y_ft: 4.7
+    - artwork_id: A125
+      x_ft: 31.65
+      y_ft: 4.75
